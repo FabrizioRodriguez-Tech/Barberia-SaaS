@@ -12,6 +12,7 @@ model Empresa {
   nombre     String
   creadoEn   DateTime   @default(now())
   sucursales Sucursal[]
+  servicios  Servicio[]
 }
 
 model Sucursal {
@@ -19,4 +20,14 @@ model Sucursal {
   nombre    String
   empresaId String
   empresa   Empresa @relation(fields: [empresaId], references: [id])
+}
+
+model Servicio {
+  id          String  @id @default(uuid())
+  nombre      String
+  duracionMin Int
+  precio      Decimal @db.Decimal(10, 2)
+  activo      Boolean @default(true)
+  empresaId   String
+  empresa     Empresa @relation(fields: [empresaId], references: [id])
 }
