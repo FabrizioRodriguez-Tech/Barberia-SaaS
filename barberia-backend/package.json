@@ -1,8 +1,8 @@
 {
   "name": "barberia-backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "API de reservas y gestión para barberías con varias sucursales (SaaS multi-tenant)",
+  "author": "Fabrizio",
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
